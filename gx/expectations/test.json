@@ -1,0 +1,114 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "test",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "sts",
+          "family",
+          "column",
+          "timestamp",
+          "sts_sim",
+          "category",
+          "similarity"
+        ]
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "sts"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "family"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "column"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "timestamp"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "sts_sim"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "category"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "similarity"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "family",
+        "value_set": [
+          "test"
+        ]
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "column",
+        "value_set": [
+          "similarities"
+        ]
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "timestamp",
+        "regex": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\.\\d{6}\\+\\d{2}:\\d{2}$"
+      },
+      "meta": {
+        "description": "Validate string format for datetime values in the column.",
+        "example": "2024-05-10 17:18:38.510000+00:00"
+      }
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "similarity",
+        "min_value": 0.002
+      }
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_request": {
+          "data_asset_name": "test.csv",
+          "data_connector_name": "default_inferred_data_connector_name",
+          "datasource_name": "my_datasource_csv",
+          "limit": 4000
+        },
+        "citation_date": "2024-05-02T16:53:39.902427Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.18.12"
+  }
+}
